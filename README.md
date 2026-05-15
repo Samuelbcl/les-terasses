@@ -2,56 +2,68 @@
 
 Site web du restaurant **Les Terrasses**, brasserie de bistronomie à Liège, à deux pas de la gare des Guillemins.
 
-> Cette version est une refonte en HTML statique. Une version Astro / Next.js avec gestion de contenu est prévue pour la suite.
+## Stack
+
+- **Framework** : [Next.js 14](https://nextjs.org) avec App Router
+- **Langage** : TypeScript
+- **Styles** : [Tailwind CSS](https://tailwindcss.com)
+- **Polices** : [Fraunces](https://fonts.google.com/specimen/Fraunces), [Inter](https://fonts.google.com/specimen/Inter), [Caveat](https://fonts.google.com/specimen/Caveat) via `next/font/google`
+- **Hébergement** : [Vercel](https://vercel.com)
 
 ## Pages
 
-- `index.html` — Accueil (hero, présentation, aperçu carte, avis, infos pratiques)
-- `carte.html` — La carte complète (entrées, plats, classiques liégeois, desserts, vins)
-- `reservation.html` — Formulaire de réservation
-
-## Stack
-
-Site statique en HTML / CSS pur. Aucun build, aucune dépendance JavaScript externe.
-Polices : [Fraunces](https://fonts.google.com/specimen/Fraunces), [Inter](https://fonts.google.com/specimen/Inter), [Caveat](https://fonts.google.com/specimen/Caveat) via Google Fonts.
+- `/` — Accueil (hero, présentation, aperçu carte, avis, infos pratiques)
+- `/carte` — La carte complète
+- `/reservation` — Formulaire de réservation
 
 ## Structure
 
 ```
 .
-├── index.html              Accueil
-├── carte.html              La carte
-├── reservation.html        Réservation
-├── mockup.css              Styles spécifiques aux pages
-├── shared/
-│   └── styles.css          Design system (variables, typo, composants)
-├── brand/
-│   └── logo.avif           Logo
-└── assets/
-    └── hero.jpg            Image hero accueil
+├── app/
+│   ├── layout.tsx          Layout racine + polices
+│   ├── globals.css         Styles globaux + Tailwind layers
+│   ├── page.tsx            Accueil
+│   ├── carte/page.tsx
+│   └── reservation/page.tsx
+├── components/
+│   ├── Topbar.tsx
+│   ├── Header.tsx
+│   └── Footer.tsx
+├── public/
+│   ├── logo.avif
+│   └── hero.jpg
+├── tailwind.config.ts      Palette + polices customs
+├── next.config.mjs
+├── tsconfig.json
+└── package.json
 ```
+
+## Développement local
+
+```bash
+npm install
+npm run dev
+```
+
+Le site est servi sur [http://localhost:3000](http://localhost:3000).
+
+## Build production
+
+```bash
+npm run build
+npm run start
+```
+
+## Déploiement
+
+Déploiement automatique sur [Vercel](https://vercel.com) à chaque push sur `main`.
 
 ## Le restaurant
 
 - **Adresse** : 1, Avenue Rogier, 4000 Liège — Belgique
 - **Téléphone** : 0498 / 36 66 77
 - **Email** : info@lesterrasses-liege.com
-
-## Développement local
-
-Aucune installation requise. Ouvre simplement `index.html` dans un navigateur, ou sers le dossier avec n'importe quel serveur statique :
-
-```bash
-# Avec Python
-python -m http.server 8000
-
-# Avec Node
-npx serve .
-```
-
-## Déploiement
-
-Déployé sur [Vercel](https://vercel.com). Tout push sur la branche `main` déclenche un déploiement automatique.
 
 ## À faire
 
@@ -62,4 +74,3 @@ Déployé sur [Vercel](https://vercel.com). Tout push sur la branche `main` déc
 - [ ] Galerie photo
 - [ ] Schéma structuré JSON-LD pour le SEO local
 - [ ] Création d'un compte Instagram
-- [ ] Migration vers Astro pour gestion de contenu

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-craie text-encre font-body antialiased;
+  }
+  ::selection {
+    @apply bg-bordeaux text-blanc-craie;
+  }
+}
+
+@layer components {
+  .container-content {
+    @apply mx-auto max-w-content px-8 max-md:px-4;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 px-8 py-3.5 rounded-sm
+           font-body font-medium text-xs uppercase tracking-wider
+           transition-all duration-200 cursor-pointer border border-transparent;
+  }
+  .btn-primary {
+    @apply bg-bordeaux text-blanc-craie hover:bg-bordeaux-hover hover:-translate-y-px;
+  }
+  .btn-secondary {
+    @apply border-encre text-encre hover:bg-encre hover:text-blanc-craie;
+  }
+  .btn-on-dark {
+    @apply border-white/40 text-blanc-craie hover:bg-blanc-craie hover:text-encre hover:border-blanc-craie;
+  }
+  .btn-large {
+    @apply px-10 py-4 text-sm;
+  }
+
+  .section-eyebrow {
+    @apply font-body uppercase tracking-[0.18em] text-xs text-bordeaux font-medium mb-2;
+  }
+  .section-title {
+    @apply font-display font-semibold text-4xl tracking-tight leading-tight mb-4;
+  }
+  .section-intro {
+    @apply max-w-prose text-ardoise text-lg leading-relaxed mb-12;
+  }
+}
