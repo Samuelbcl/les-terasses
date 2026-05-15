@@ -3,6 +3,7 @@ import Link from "next/link";
 import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HoursToday from "@/components/HoursToday";
 
 const featuredDishes = [
   {
@@ -76,12 +77,12 @@ export default function HomePage() {
             <p className="font-script text-3xl text-blanc-craie/80 mb-4 leading-none">
               Brasserie · Restaurant · Liège
             </p>
-            <h1 className="font-display font-semibold text-display leading-[1.05] mb-6">
-              Bonne cuisine,
-              <span className="block font-display font-normal italic text-2xl my-2 text-blanc-craie/70 tracking-normal max-md:text-lg">
+            <h1 className="font-display font-semibold text-display leading-[1.05] mb-6 uppercase tracking-wider">
+              Bonne cuisine
+              <span className="block">Et bon vin,</span>
+              <span className="block font-display font-normal italic text-2xl mt-4 normal-case text-blanc-craie/70 tracking-normal max-md:text-lg">
                 c&apos;est le paradis sur terre.
               </span>
-              Et bon vin.
             </h1>
             <p className="text-lg max-w-lg text-blanc-craie/80 mb-8">
               Bistronomie liégeoise à deux pas des Guillemins. Convivialité, produits choisis,
@@ -96,36 +97,22 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="bg-charbon/70 backdrop-blur-md border border-blanc-craie/10 p-8 rounded">
-            <h3 className="font-display text-xl mb-4">Aujourd&apos;hui</h3>
-            <ul className="flex flex-col gap-2">
-              <li className="flex justify-between pb-2 border-b border-dashed border-blanc-craie/15">
-                <strong className="font-medium">Déjeuner</strong>
-                <span className="text-blanc-craie/80 tabular-nums">12h00 — 14h30</span>
-              </li>
-              <li className="flex justify-between pb-2 border-b border-dashed border-blanc-craie/15">
-                <strong className="font-medium">Dîner</strong>
-                <span className="text-blanc-craie/80 tabular-nums">18h00 — 22h00</span>
-              </li>
-              <li className="flex justify-between">
-                <strong className="font-medium">Cuisine</strong>
-                <span className="text-blanc-craie/80">en service</span>
-              </li>
-            </ul>
-          </div>
+          <HoursToday />
         </div>
       </section>
 
       {/* BISTRONOMIE */}
       <section className="bg-craie py-32">
         <div className="container-content grid grid-cols-[1fr_1.2fr] gap-16 items-center max-md:grid-cols-1 max-md:gap-8">
-          <div
-            className="aspect-[4/5] rounded max-md:aspect-[4/3]"
-            style={{
-              background:
-                "linear-gradient(135deg, #1F1F1D 0%, #0F0F0E 50%, #3A3835 100%)",
-            }}
-          />
+          <div className="relative aspect-[4/5] rounded overflow-hidden max-md:aspect-[4/3]">
+            <Image
+              src="/bistronomie.jpg"
+              alt="Cuisine de bistronomie aux Terrasses"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
           <div>
             <p className="section-eyebrow">Notre Maison</p>
             <h2 className="font-display font-semibold text-5xl tracking-tight leading-[1.1] mb-6">
@@ -141,7 +128,7 @@ export default function HomePage() {
               nos artisans, des recettes qui ont du sens, et des vins qui racontent une histoire.
               Sans manière, mais avec soin.
             </p>
-            <div className="font-script text-3xl text-bordeaux mt-6">— L&apos;équipe des Terrasses</div>
+            <div className="font-script text-3xl text-bordeaux mt-6">— Les Terrasses</div>
           </div>
         </div>
       </section>
