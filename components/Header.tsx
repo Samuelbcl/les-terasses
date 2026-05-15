@@ -33,15 +33,13 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 text-blanc-craie transition-all duration-300
-        ${transparent
-          ? "bg-transparent"
-          : "bg-charbon/95 backdrop-blur-md border-b border-blanc-craie/10"}
+      className={`fixed top-0 left-0 right-0 z-50 text-blanc-craie transition-colors duration-200
+        ${transparent ? "bg-transparent" : "bg-charbon"}
       `}
     >
       {/* Topbar info — visible au top, masquée au scroll */}
       <div
-        className={`overflow-hidden transition-[max-height] duration-300 ease-out
+        className={`overflow-hidden transition-[max-height] duration-200 ease-out
           ${scrolled ? "max-h-0" : "max-h-12"}`}
       >
         <div className="container-content py-2 flex items-center justify-between gap-8 flex-wrap text-xs uppercase tracking-wider">
