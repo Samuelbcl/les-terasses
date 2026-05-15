@@ -12,6 +12,13 @@
   ::selection {
     @apply bg-bordeaux text-blanc-craie;
   }
+  /* Pas d'outline pour les clics souris, mais focus accessible au clavier */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @layer components {

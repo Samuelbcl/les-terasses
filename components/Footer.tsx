@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -52,7 +52,7 @@ export default function Footer() {
             </a>
             <span className="text-sm opacity-75 block">
               Instagram{" "}
-              <span className="font-script text-ocre-soft text-base">à venir</span>
+              <span className="font-script text-blanc-craie/80 text-base">à venir</span>
             </span>
           </div>
         </div>

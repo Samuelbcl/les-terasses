@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Topbar from "@/components/Topbar";
@@ -33,9 +33,9 @@ export default function ReservationPage() {
 
       {/* HERO COMPACT */}
       <section className="bg-charbon text-blanc-craie py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(181,115,58,0.1),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(92,26,27,0.18),transparent_60%)]" />
         <div className="container-content relative">
-          <p className="font-script text-2xl text-ocre-soft mb-2 leading-none">
+          <p className="font-script text-2xl text-blanc-craie/80 mb-2 leading-none">
             À deux clics de votre table
           </p>
           <h1 className="font-display font-semibold text-display tracking-tight leading-tight mb-4">
@@ -287,8 +287,8 @@ export default function ReservationPage() {
                 d: "À votre arrivée, votre table est prête à votre nom. On vous attend.",
               },
             ].map((step) => (
-              <div key={step.n} className="bg-craie p-6 rounded border-t-[3px] border-ocre">
-                <div className="font-display font-semibold text-5xl text-ocre leading-none mb-2">
+              <div key={step.n} className="bg-craie p-6 rounded border-t-[3px] border-bordeaux">
+                <div className="font-display font-semibold text-5xl text-bordeaux leading-none mb-2">
                   {step.n}
                 </div>
                 <h4 className="font-display font-semibold text-base mb-2">{step.t}</h4>
@@ -297,7 +297,7 @@ export default function ReservationPage() {
             ))}
           </div>
 
-          <div className="mt-24 bg-lin border-l-4 border-ocre rounded-r px-8 py-4">
+          <div className="mt-24 bg-lin border-l-4 border-bordeaux rounded-r px-8 py-4">
             <strong className="text-bordeaux">Vous préférez réserver par téléphone ?</strong>
             <br />
             Aucun problème. Appelez-nous au{" "}

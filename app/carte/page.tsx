@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -154,7 +154,7 @@ function MenuSection({
     <section id={id} className="my-24">
       <h2 className="font-display font-semibold text-4xl mb-2 flex items-baseline gap-4 flex-wrap">
         {title}
-        <span className="font-script text-ocre text-xl font-normal">{note}</span>
+        <span className="font-script text-bordeaux text-xl font-normal">{note}</span>
       </h2>
       {intro && <p className="text-ardoise max-w-prose mb-12">{intro}</p>}
       <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-6 gap-x-12">
@@ -164,7 +164,7 @@ function MenuSection({
               <h3 className="font-display font-semibold text-lg leading-tight">
                 {item.name}
                 {item.badge && (
-                  <span className="inline-block font-script text-ocre text-base -rotate-3 ml-2 align-middle">
+                  <span className="inline-block font-script text-bordeaux text-base -rotate-3 ml-2 align-middle">
                     {item.badge}
                   </span>
                 )}
@@ -192,9 +192,9 @@ export default function CartePage() {
 
       {/* HERO COMPACT */}
       <section className="bg-charbon text-blanc-craie py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(181,115,58,0.1),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(92,26,27,0.18),transparent_60%)]" />
         <div className="container-content relative">
-          <p className="font-script text-2xl text-ocre-soft mb-2 leading-none">
+          <p className="font-script text-2xl text-blanc-craie/80 mb-2 leading-none">
             Au feu, au four, et à la cave
           </p>
           <h1 className="font-display font-semibold text-display tracking-tight leading-tight mb-4">
@@ -221,7 +221,10 @@ export default function CartePage() {
               <a
                 key={id}
                 href={`#${id}`}
-                className="px-5 py-3 text-ardoise hover:text-encre text-sm uppercase tracking-wider border-b-2 border-transparent -mb-px transition-colors"
+                className="px-5 py-3 text-ardoise hover:text-encre text-sm uppercase tracking-wider
+                           border-b-2 border-transparent hover:border-bordeaux -mb-px
+                           transition-all duration-200
+                           outline-none focus-visible:ring-2 focus-visible:ring-bordeaux/30 rounded-sm"
               >
                 {label}
               </a>
@@ -268,7 +271,7 @@ export default function CartePage() {
             items={vins}
           />
 
-          <div className="mt-24 bg-lin border-l-4 border-ocre rounded-r px-8 py-4">
+          <div className="mt-24 bg-lin border-l-4 border-bordeaux rounded-r px-8 py-4">
             <strong className="text-bordeaux">Allergies &amp; intolérances</strong> : nos plats
             sont préparés en cuisine ouverte. Les allergènes courants sont indiqués sous chaque
             plat, mais des traces peuvent subsister. Signalez-le à votre serveur — on s&apos;adapte.

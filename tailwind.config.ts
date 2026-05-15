@@ -21,10 +21,6 @@ const config: Config = {
           hover: "#7A2426",
           active: "#4A1416",
         },
-        ocre: {
-          DEFAULT: "#B5733A",
-          soft: "#C99366",
-        },
         ardoise: "#3A3835",
       },
       fontFamily: {

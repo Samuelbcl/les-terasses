@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
@@ -73,15 +73,15 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-charbon/40 to-charbon/85" />
         <div className="container-content relative z-10 w-full grid grid-cols-[1.2fr_1fr] gap-16 items-end py-24 max-md:grid-cols-1 max-md:gap-8">
           <div>
-            <p className="font-script text-3xl text-ocre-soft mb-4 leading-none">
+            <p className="font-script text-3xl text-blanc-craie/80 mb-4 leading-none">
               Brasserie · Restaurant · Liège
             </p>
             <h1 className="font-display font-semibold text-display leading-[1.05] mb-6">
               Bonne cuisine,
-              <br />
-              c&apos;est le paradis sur terre.
-              <br />
-              <em className="italic font-normal text-ocre-soft">Et bon vin.</em>
+              <span className="block font-display font-normal italic text-2xl my-2 text-blanc-craie/70 tracking-normal max-md:text-lg">
+                c&apos;est le paradis sur terre.
+              </span>
+              Et bon vin.
             </h1>
             <p className="text-lg max-w-lg text-blanc-craie/80 mb-8">
               Bistronomie liégeoise à deux pas des Guillemins. Convivialité, produits choisis,
@@ -101,15 +101,15 @@ export default function HomePage() {
             <ul className="flex flex-col gap-2">
               <li className="flex justify-between pb-2 border-b border-dashed border-blanc-craie/15">
                 <strong className="font-medium">Déjeuner</strong>
-                <span className="text-ocre-soft tabular-nums">12h00 — 14h30</span>
+                <span className="text-blanc-craie/80 tabular-nums">12h00 — 14h30</span>
               </li>
               <li className="flex justify-between pb-2 border-b border-dashed border-blanc-craie/15">
                 <strong className="font-medium">Dîner</strong>
-                <span className="text-ocre-soft tabular-nums">18h00 — 22h00</span>
+                <span className="text-blanc-craie/80 tabular-nums">18h00 — 22h00</span>
               </li>
               <li className="flex justify-between">
                 <strong className="font-medium">Cuisine</strong>
-                <span className="text-ocre-soft">en service</span>
+                <span className="text-blanc-craie/80">en service</span>
               </li>
             </ul>
           </div>
@@ -153,7 +153,7 @@ export default function HomePage() {
           <h2 className="section-title">Quelques suggestions du chef</h2>
           <p className="section-intro">
             La carte change avec les saisons et les arrivages. Voici un aperçu — pour le détail,{" "}
-            <Link href="/carte" className="text-bordeaux underline decoration-ocre underline-offset-4">
+            <Link href="/carte" className="text-bordeaux underline decoration-bordeaux underline-offset-4">
               consultez la carte complète
             </Link>
             .
@@ -169,7 +169,7 @@ export default function HomePage() {
                   <h3 className="font-display font-semibold text-lg leading-tight">
                     {d.name}
                     {d.badge && (
-                      <span className="inline-block font-script text-ocre text-base -rotate-3 ml-2 align-middle">
+                      <span className="inline-block font-script text-bordeaux text-base -rotate-3 ml-2 align-middle">
                         {d.badge}
                       </span>
                     )}
@@ -204,7 +204,7 @@ export default function HomePage() {
           <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1">
             {testimonials.map((t) => (
               <div key={t.author} className="bg-blanc-craie p-8 rounded">
-                <div className="text-ocre text-lg tracking-widest mb-2">★★★★★</div>
+                <div className="text-bordeaux text-lg tracking-widest mb-2">★★★★★</div>
                 <p className="font-display italic leading-relaxed mb-4">«{" "}{t.quote}{" "}»</p>
                 <div className="text-sm text-ardoise flex justify-between items-center">
                   <span>{t.author}</span>
@@ -254,14 +254,14 @@ export default function HomePage() {
             <p>
               <a
                 href="tel:+32498366677"
-                className="underline decoration-ocre underline-offset-4"
+                className="underline decoration-bordeaux underline-offset-4"
               >
                 0498 / 36 66 77
               </a>
               <br />
               <a
                 href="mailto:info@lesterrasses-liege.com"
-                className="underline decoration-ocre underline-offset-4"
+                className="underline decoration-bordeaux underline-offset-4"
               >
                 info@lesterrasses-liege.com
               </a>
@@ -293,7 +293,7 @@ export default function HomePage() {
             />
             <div className="relative z-10 text-center">
               <div className="w-4 h-4 bg-bordeaux rounded-full mx-auto mb-2 shadow-[0_0_0_8px_rgba(92,26,27,0.25)] animate-pulse" />
-              <div className="font-script text-xl text-ocre-soft">
+              <div className="font-script text-xl text-blanc-craie/80">
                 Les Terrasses · Avenue Rogier
               </div>
             </div>
