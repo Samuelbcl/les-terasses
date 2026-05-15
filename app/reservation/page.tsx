@@ -30,7 +30,7 @@ export default function ReservationPage() {
       <Header />
 
       {/* HERO COMPACT */}
-      <section className="bg-charbon text-blanc-craie pt-40 pb-16 relative overflow-hidden">
+      <section className="bg-charbon text-blanc-craie pt-44 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(92,26,27,0.18),transparent_60%)]" />
         <div className="container-content relative">
           <p className="font-script text-2xl text-blanc-craie/80 mb-2 leading-none">

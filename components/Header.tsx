@@ -72,10 +72,10 @@ export default function Header() {
           <Image
             src="/logo.png"
             alt="Les Terrasses"
-            width={96}
-            height={96}
+            width={128}
+            height={128}
             priority
-            className="h-16 w-auto"
+            className="h-20 w-auto"
           />
         </Link>
 

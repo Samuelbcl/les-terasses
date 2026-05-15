@@ -60,7 +60,7 @@ export default function HomePage() {
       <Header />
 
       {/* HERO */}
-      <section className="relative bg-charbon text-blanc-craie min-h-screen flex items-center overflow-hidden">
+      <section className="relative bg-charbon text-blanc-craie min-h-screen flex items-center overflow-hidden pt-36">
         <Image
           src="/hero.jpg"
           alt=""
