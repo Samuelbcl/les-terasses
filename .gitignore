@@ -1,0 +1,22 @@
+# Dossier interne (audit, docs, brouillons — ne pas publier)
+_internal/
+
+# Vercel
+.vercel/
+
+# Système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node (au cas où on ajoute un build plus tard)
+node_modules/
+dist/
+build/
+.cache/
