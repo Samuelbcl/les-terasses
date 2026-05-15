@@ -8,13 +8,10 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/", label: "Accueil" },
   { href: "/carte", label: "La Carte" },
-  { href: "/#galerie", label: "Galerie" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 function isLinkActive(href: string, pathname: string): boolean {
-  // Les ancres internes (/#section) ne sont jamais considérées « actives »
-  if (href.startsWith("/#")) return false;
   if (href === "/") return pathname === "/";
   return pathname.startsWith(href);
 }
@@ -22,6 +19,7 @@ function isLinkActive(href: string, pathname: string): boolean {
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -30,15 +28,44 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Transparent uniquement sur la home, en haut de page
+  const transparent = isHome && !scrolled;
+
   return (
     <header
-      className={`sticky top-0 z-50 text-blanc-craie py-3 transition-all duration-300
-        ${scrolled
-          ? "bg-charbon/95 backdrop-blur-md border-b border-blanc-craie/10"
-          : "bg-transparent border-b border-transparent"}
+      className={`fixed top-0 left-0 right-0 z-50 text-blanc-craie transition-all duration-300
+        ${transparent
+          ? "bg-transparent"
+          : "bg-charbon/95 backdrop-blur-md border-b border-blanc-craie/10"}
       `}
     >
-      <div className="container-content flex items-center justify-between gap-8">
+      {/* Topbar info — visible au top, masquée au scroll */}
+      <div
+        className={`overflow-hidden transition-[max-height] duration-300 ease-out
+          ${scrolled ? "max-h-0" : "max-h-12"}`}
+      >
+        <div className="container-content py-2 flex items-center justify-between gap-8 flex-wrap text-xs uppercase tracking-wider">
+          <span>1, Avenue Rogier — 4000 Liège</span>
+          <span>
+            <a
+              href="tel:+32498366677"
+              className="opacity-85 hover:opacity-100 transition-opacity"
+            >
+              0498 / 36 66 77
+            </a>{" "}
+            ·{" "}
+            <a
+              href="mailto:info@lesterrasses-liege.com"
+              className="opacity-85 hover:opacity-100 transition-opacity"
+            >
+              info@lesterrasses-liege.com
+            </a>
+          </span>
+        </div>
+      </div>
+
+      {/* Main bar */}
+      <div className="container-content flex items-center justify-between gap-8 py-3">
         <Link
           href="/"
           className="flex items-center gap-4 no-underline text-inherit rounded-sm

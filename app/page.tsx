@@ -1,6 +1,5 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
-import Topbar from "@/components/Topbar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HoursToday from "@/components/HoursToday";
@@ -58,11 +57,10 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
-      <Topbar />
       <Header />
 
       {/* HERO */}
-      <section className="relative bg-charbon text-blanc-craie min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative bg-charbon text-blanc-craie min-h-screen flex items-center overflow-hidden">
         <Image
           src="/hero.jpg"
           alt=""
