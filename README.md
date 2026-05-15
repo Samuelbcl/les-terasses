@@ -31,7 +31,7 @@ Site web du restaurant **Les Terrasses**, brasserie de bistronomie à Liège, à
 │   ├── Header.tsx
 │   └── Footer.tsx
 ├── public/
-│   ├── logo.avif
+│   ├── logo.png
 │   └── hero.jpg
 ├── tailwind.config.ts      Palette + polices customs
 ├── next.config.mjs

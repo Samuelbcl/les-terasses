@@ -23,12 +23,12 @@ export default function Header() {
                      outline-none focus-visible:ring-2 focus-visible:ring-blanc-craie/40 focus-visible:ring-offset-4 focus-visible:ring-offset-charbon"
         >
           <Image
-            src="/logo.avif"
+            src="/logo.png"
             alt="Les Terrasses"
-            width={56}
-            height={56}
+            width={96}
+            height={96}
             priority
-            className="h-14 w-auto"
+            className="h-20 w-auto"
           />
         </Link>
 

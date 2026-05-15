@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr] gap-12 mb-16 max-md:grid-cols-2 max-md:gap-8">
           <div>
             <Image
-              src="/logo.avif"
+              src="/logo.png"
               alt="Les Terrasses"
-              width={80}
-              height={80}
-              className="h-20 w-auto mb-4"
+              width={96}
+              height={96}
+              className="h-24 w-auto mb-4"
             />
             <p className="text-sm opacity-75 leading-relaxed">
               Brasserie · Restaurant. Bistronomie liégeoise à deux pas des Guillemins.
